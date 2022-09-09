@@ -26,11 +26,11 @@ def getProductImage(cimriProducts):
         productImageList.append(productImage)
     return productImageList
 
-
+productList = {}
+productsList = []
+products = {}
 def getProducts(productNameList, productUrlList,productImageList ):
-    productList = {}
-    productsList = []
-    products = {}
+    
     productIndex = 0
     for product in productNameList:
         productList["product" + str(productIndex)] = [
