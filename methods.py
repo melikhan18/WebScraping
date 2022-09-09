@@ -1,23 +1,24 @@
+productNameList = []
 def getProductName(cimriProducts):
-    productNameList = []
+    
     for cimriProduct in cimriProducts:
         product = cimriProduct.find("article")
         productName = product.find("a" , {"class" : "link-detail"}).get("title")
         productNameList.append(productName)
     return productNameList
 
-
+productUrlList = []
 def getProductUrl(cimriProducts):
-    productUrlList = []
+    
     for cimriProduct in cimriProducts:
         product = cimriProduct.find("article")
         productUrl = product.find("a" , {"class" : "link-detail"}).get("href")
         productUrl = "https://www.cimri.com/" + productUrl
         productUrlList.append(productUrl)
     return productUrlList
-
+productImageList = []
 def getProductImage(cimriProducts):
-    productImageList = []
+    
     for cimriProduct in cimriProducts:
         product = cimriProduct.find("article")
         productImage = product.find("div" , {"class" : "image-wrapper"})\
@@ -29,8 +30,8 @@ def getProductImage(cimriProducts):
 productList = {}
 productsList = []
 products = {}
-def getProducts(productNameList, productUrlList,productImageList ):
-    
+
+def getProducts(productNameList, productUrlList,productImageList):
     productIndex = 0
     for product in productNameList:
         productList["product" + str(productIndex)] = [
