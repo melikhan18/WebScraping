@@ -19,7 +19,7 @@ def startProject(url):
         
     return getProduct
 index = 1
-while(index < 50):
+while(index < 5):
     getProduct = startProject(url)
     url = url.replace("?page=" + str(index) , "?page=" + str(index+1))
     print("Şuanda veri çekilen adres : " + url)

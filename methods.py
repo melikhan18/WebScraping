@@ -28,10 +28,12 @@ def getProductImage(cimriProducts):
     return productImageList
 
 productList = {}
-productsList = []
-products = {}
+
+
 
 def getProducts(productNameList, productUrlList,productImageList):
+    productsList = []
+    products = {}
     productIndex = 0
     for product in productNameList:
         productList["product" + str(productIndex)] = [
